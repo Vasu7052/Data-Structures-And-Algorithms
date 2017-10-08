@@ -35,10 +35,7 @@ public class OptimalBst {
 					if(k == i+j+1) {
 						solution[j][k] = findMinimum(solution , j , k);
 					}
-					
 				}
-				
-				
 			}
 		}
 		
@@ -54,10 +51,23 @@ public class OptimalBst {
 	public static int findMinimum(int[][] array , int i , int j){
 		
 		int min = Integer.MAX_VALUE ;
+		int baseSum = 0 ;
+		
+		for (int k = i ; k <= j ; k++) {
+			baseSum += access[k] ;			
+		}
 		
 		for (int k = i ; k < j ; k++) {
 			
-			int temp = array[i][k] + array[k+1][j] + (matrices[i]*matrices[k+1]*matrices[j+1]) ;
+			int temp = Integer.MAX_VALUE ;
+			
+			if(k == i) {
+				temp = baseSum +  array[k+1][j] ;
+			}else if(k == j) {
+				temp = baseSum +  array[i][j-1] ;
+			}else{
+				temp = baseSum +  array[i][k-1] + +  array[k+1][j] ;
+			}
 			
 			if(temp <= min) {
 				min = temp ;
