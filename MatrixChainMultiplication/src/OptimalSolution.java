@@ -16,7 +16,7 @@ public class OptimalSolution {
 		}
 		
 		
-		for (int i = 0 ; i < 4 ; i++) {
+		for (int i = 0 ; i < solution.length-1 ; i++) {
 			
 			for (int j = 0; j < solution.length - 1; j++) {
 				
