@@ -61,7 +61,7 @@ public class LongestSubsequence {
         }System.out.println("");   
         }
         
-        
+        System.out.println();
         for (int i = 0 ; i < i1 ; i++) {
             
             for (int j = 0 ; j < j1 ; j++) {
@@ -94,7 +94,7 @@ public class LongestSubsequence {
             
         }
         
-        System.out.print("Longest Subsequence : ");
+        System.out.print("\nLongest Subsequence : ");
         
         for (int i = 0; temp[i] != null ; i++) {
             System.out.print(temp[i] + " ");
