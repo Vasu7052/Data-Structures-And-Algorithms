@@ -39,12 +39,14 @@ public class OptimalBst {
 			}
 		}
 		
-		for (int i = 0; i < solution.length; i++) {
+		 for (int i = 0; i < solution.length; i++) {
 			for (int j = 0; j < solution.length; j++) {
 				System.out.print(solution[i][j] + " ");
 			}
 			System.out.println();
-		}
+		} 
+		
+		System.out.println("\nCost of Optimal Binary Search Tree : " + solution[0][solution.length - 1]);
 		
 	}
 	
@@ -57,9 +59,9 @@ public class OptimalBst {
 			baseSum += access[k] ;			
 		}
 		
-		for (int k = i ; k < j ; k++) {
+		for (int k = i ; k <= j ; k++) {
 			
-			int temp = Integer.MAX_VALUE ;
+			int temp = 0 ;
 			
 			if(k == i) {
 				temp = baseSum +  array[k+1][j] ;
