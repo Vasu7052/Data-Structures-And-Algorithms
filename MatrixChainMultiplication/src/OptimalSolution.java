@@ -1,7 +1,7 @@
 
 public class OptimalSolution {
 	
-	static int[] matrices = {4,10,3,12,20,7} ;
+	static int[] matrices = {40, 20, 30, 10, 30} ;
 	
 	public static void main(String[] args) {
 		
@@ -30,14 +30,6 @@ public class OptimalSolution {
 				
 				
 			}
-		}
-		
-		
-		for (int i = 0; i < solution.length; i++) {
-			for (int j = 0; j < solution.length; j++) {
-				System.out.print(solution[i][j] + " ");
-			}
-			System.out.println();
 		}
 		
 		System.out.println("Minimum number of multiplications : " + solution[0][solution.length-1]);
