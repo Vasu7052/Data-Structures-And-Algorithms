@@ -52,7 +52,7 @@ public class LongestSubsequence {
             
         }
         
-        for (int i = 0 ; i < i1 ; i++) {
+     /*   for (int i = 0 ; i < i1 ; i++) {
             
             for (int j = 0 ; j < j1 ; j++) {
             
@@ -60,7 +60,7 @@ public class LongestSubsequence {
             
         }System.out.println("");   
         }
-        
+      
         System.out.println();
         for (int i = 0 ; i < i1 ; i++) {
             
@@ -69,7 +69,7 @@ public class LongestSubsequence {
                 System.out.print(arrow[i][j] + " ");
             
         }System.out.println("");   
-        }
+        } */
         
         String[] temp = new String[5] ;
         
@@ -94,7 +94,7 @@ public class LongestSubsequence {
             
         }
         
-        System.out.print("\nLongest Subsequence : ");
+        System.out.print("Longest Subsequence : ");
         
         for (int i = 0; temp[i] != null ; i++) {
             System.out.print(temp[i] + " ");
