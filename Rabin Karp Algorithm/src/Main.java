@@ -50,6 +50,12 @@ public class Main
         String txt = "GEEKS FOR GEEKS";
         String pat = "GEEK";
         int q = 101; 
+        
+        long time1 = System.nanoTime() ;
         search(pat, txt, q);
+        long time2 = System.nanoTime() - time1 ;
+        double seconds = (double) time2 / 1000000000 ;
+        System.out.println("Time Complexity : " + seconds);
+        
     }
 }

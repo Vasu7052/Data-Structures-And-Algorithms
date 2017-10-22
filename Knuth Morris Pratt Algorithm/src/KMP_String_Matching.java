@@ -69,6 +69,12 @@ class KMP_String_Matching
     {
         String txt = "ABABDABACDABABCABAB";
         String pat = "ABABCABAB";
+        
+        long time1 = System.nanoTime() ;
         new KMP_String_Matching().KMPSearch(pat,txt);
+        long time2 = System.nanoTime() - time1 ;
+        double seconds = (double) time2 / 1000000000 ;
+        System.out.println("Time Complexity : " + seconds);
+        
     }
 }

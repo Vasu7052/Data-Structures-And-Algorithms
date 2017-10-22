@@ -70,6 +70,10 @@ public class ShortestPath
                                   {0, 0, 2, 0, 0, 0, 6, 7, 0}
                                  };
         ShortestPath t = new ShortestPath();
+        long time1 = System.nanoTime() ;
         t.dijkstra(graph, 0);
+        long time2 = System.nanoTime() - time1 ;
+        double seconds = (double) time2 / 1000000000 ;
+        System.out.println("Time Complexity : " + seconds);
     }
 }

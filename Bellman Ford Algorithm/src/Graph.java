@@ -106,6 +106,11 @@ public class Graph
         graph.edge[7].dest = 3;
         graph.edge[7].weight = -3;
  
+        long time1 = System.nanoTime() ;
         graph.BellmanFord(graph, 0);
+        long time2 = System.nanoTime() - time1 ;
+        double seconds = (double) time2 / 1000000000 ;
+        System.out.println("Time Complexity : " + seconds);
+      
     }
 }
