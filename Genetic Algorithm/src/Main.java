@@ -1,11 +1,5 @@
 import java.util.Random;
 
-/**
- *
- * @author Vijini
- */
-
-//Main class
 public class Main {
 
     Population population = new Population();
