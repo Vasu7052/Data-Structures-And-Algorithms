@@ -25,7 +25,7 @@ public class Main {
         //Calculate fitness of each individual
         demo.population.calculateFitness();
 
-        System.out.println("Generation: " + demo.generationCount + " Fittest: " + demo.population.fittest);
+        System.out.println("one Generation: " + demo.generationCount + " Fittest: " + demo.population.fittest);
 
         //While population gets an individual with maximum fitness
         while (demo.population.fittest < 5) {
