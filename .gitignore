@@ -1,2 +1,6 @@
-/.metadata/
-/.recommenders/
+src/
+DS-Algo.iml
+Data Structures/src/
+Data Structures/Data Structures.iml
+Algorithms/src/
+Algorithms/Algorithms.iml
