@@ -60,10 +60,8 @@ class LinkList{
 			end = start ;  // make node the ending node
 			
 		}else {
-			
-		node.setLink(start); // Attach new node before start
-		start = node ;  // make the new node as start
-		
+			node.setLink(start); // Attach new node before start
+			start = node ;  // make the new node as start
 		}
 		
 	}
