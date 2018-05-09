@@ -27,10 +27,14 @@ Here are some of my Data structures and algorithms created in Java Programming L
 
 ## Data Structures Present
 
+* Breadth First Search
+* Depth First Search
 * Double Linked List
+* Inbuilt Data Structures
 * Linked List
 * Queue Array
 * Queue Linked List
+* Simple Graph Representation
 * Stack Array
 * Stack Linked List
 * Tree
