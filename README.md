@@ -12,6 +12,7 @@ Here are some of my Data structures and algorithms created in Java Programming L
 * Bellman Ford
 * Bubble Sort
 * Dijkstra
+* Floyd Warshall Algorithm
 * Genetic Algorithm
 * Insertion Sort
 * Knuth Morris Pratt
