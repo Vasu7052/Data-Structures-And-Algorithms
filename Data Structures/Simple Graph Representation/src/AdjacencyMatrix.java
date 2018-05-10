@@ -1,40 +1,53 @@
 import java.util.Scanner;
 
+@SuppressWarnings("Duplicates")
 public class AdjacencyMatrix {
+
+    static class MyGraph{
+
+        int[][] adjacency_matrix ;
+        int vertices ;
+
+        MyGraph(int vertices){
+            this.vertices = vertices ;
+            this.adjacency_matrix = new int[vertices][vertices];
+        }
+
+        public void add_edge(int src, int dest , int weight){
+            adjacency_matrix[src][dest] = weight ;
+            adjacency_matrix[dest][src] = weight ;
+        }
+
+        public void display_matrix(){
+            for (int i = 0 ; i < this.vertices ; i++){
+                for (int j = 0 ; j < this.vertices ; j++){
+                    System.out.print(this.adjacency_matrix[i][j] + " ");
+                }
+                System.out.println();
+            }
+        }
+
+    }
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        int vertices = 6 ;
 
-        System.out.print("Enter number of vertices : ");
+        MyGraph myGraph = new MyGraph(vertices) ;
 
-        int vertices = sc.nextInt();
-
-        int[][] adjacency_matrix = new int[vertices][vertices];
-
-        String status = "y" ;
-
-        while(status.equals("y")){
-
-            System.out.print("Enter the edge : ");
-            int start = sc.nextInt();
-            int end = sc.nextInt();
-
-            adjacency_matrix[start-1][end-1] = 1 ;
-            adjacency_matrix[end-1][start-1] = 1 ;
-
-            System.out.print("Do you want to add another edge : ");
-            status = sc.next();
-        }
+        myGraph.add_edge(0 , 1 , 4);
+        myGraph.add_edge(0 , 2 , 2);
+        myGraph.add_edge(1 , 3 , 5);
+        myGraph.add_edge(1 , 2 , 1);
+        myGraph.add_edge(2 , 3 , 8);
+        myGraph.add_edge(2 , 4 , 10);
+        myGraph.add_edge(3 , 4 , 2);
+        myGraph.add_edge(3 , 5 , 6);
+        myGraph.add_edge(4 , 5 , 3);
 
         System.out.println("Your Adjacency Matrix : ");
 
-        for (int i = 0 ; i < vertices ; i++){
-            for (int j = 0 ; j < vertices ; j++){
-                System.out.print(adjacency_matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
+        myGraph.display_matrix();
 
     }
 
