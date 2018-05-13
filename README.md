@@ -14,6 +14,7 @@ Here are some of my Data structures and algorithms created in Java Programming L
 * Dijkstra
 * Floyd Warshall Algorithm
 * Genetic Algorithm
+* Heap Sort
 * Insertion Sort
 * Knuth Morris Pratt
 * Longest Common Subsequence
@@ -33,6 +34,7 @@ Here are some of my Data structures and algorithms created in Java Programming L
 * Double Linked List
 * Inbuilt Data Structures
 * Linked List
+* Min and Max Heaps
 * Queue Array
 * Queue Linked List
 * Simple Graph Representation
