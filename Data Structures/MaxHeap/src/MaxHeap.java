@@ -23,7 +23,7 @@ public class MaxHeap {
         }
 
         private boolean hasRightChild(int index){
-            return (getRightChildIndex(index) >= items.size());
+            return (getRightChildIndex(index) < items.size());
         }
 
         private boolean hasParent(int index){
@@ -51,6 +51,23 @@ public class MaxHeap {
         private void add(int element){
             items.add(element);
             heapifyUp();
+        }
+
+        private void heapifyDown(){
+            int index = 0 ;
+            while (hasLeftChild(index)){
+                int biggerChildIndex = getLeftChildIndex(index);
+                if (hasRightChild(index) && getRight(index) > getRight(index)){
+                    biggerChildIndex = items.get(getRightChildIndex(index)) ;
+                }
+
+                if (items.get(index) > items.get(biggerChildIndex)){
+                    break;
+                }else{
+                    swap(index , biggerChildIndex);
+                }
+                index = biggerChildIndex ;
+            }
         }
 
         private void heapifyUp(){

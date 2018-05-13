@@ -23,7 +23,7 @@ public class MinHeap {
         }
 
         private boolean hasRightChild(int index){
-            return (getRightChildIndex(index) >= items.size());
+            return (getRightChildIndex(index) < items.size());
         }
 
         private boolean hasParent(int index){
@@ -58,6 +58,23 @@ public class MinHeap {
             while (hasParent(index) && getParent(index) > items.get(index)){
                 swap(index , getParentIndex(index));
                 index = getParentIndex(index);
+            }
+        }
+
+        private void heapifyDown(){
+            int index = 0 ;
+            while (hasLeftChild(index)){
+                int smallerChildIndex = getLeftChildIndex(index);
+                if (hasRightChild(index) && getRight(index) < getRight(index)){
+                    smallerChildIndex = items.get(getRightChildIndex(index)) ;
+                }
+
+                if (items.get(index) <items.get(smallerChildIndex)){
+                    break;
+                }else{
+                    swap(index , smallerChildIndex);
+                }
+                index = smallerChildIndex ;
             }
         }
 
